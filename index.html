@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 40px 15px;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    p { opacity: 0.9; }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 500px;
+      margin: 25px auto;
+      backdrop-filter: blur(10px);
+    }
+    button {
+      background: #ff6b81;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .hidden {
+      display: none;
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey You 🤍</h1>
+  <p>This is something I made for you.</p>
+
+  <div class="card">
+    <h2>Why this exists</h2>
+    <p>
+      Soon I’ll be busy chasing a dream.  
+      Not because I care less —  
+      but because I want a future where *we* win.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Click when you miss me</h2>
+    <button onclick="toggleMessage()">Open message</button>
+    <div id="msg" class="hidden">
+      <p>
+        If you’re reading this,  
+        I’m probably studying right now.  
+        But somewhere between books and deadlines,  
+        it’s still **you** in my head.
+        <br><br>
+        I’m not gone.  
+        I’m just building something — for us.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>For the future</h2>
+    <p>
+      One day we’ll look back at this phase  
+      and smile — knowing it was worth it.
+    </p>
+  </div>
+
+  <footer>
+    Made with 🤍 by me
+  </footer>
+
+  <script>
+    function toggleMessage() {
+      const msg = document.getElementById("msg");
+      msg.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
