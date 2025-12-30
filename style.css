@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd000, #ff6a00);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  min-height: 400px;
+  display: flex;
+  gap: 20px;
+}
+
+.left, .center, .right {
+  border-radius: 30px;
+  padding: 20px;
+}
+
+/* Left */
+.left {
+  width: 260px;
+  background: rgba(255,255,255,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cover {
+  width: 100%;
+  height: 150px;
+  background: #ddd;
+  border-radius: 15px;
+}
+
+.song-name {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Center */
+.center {
+  flex: 1;
+  background: rgba(255,255,255,0.25);
+}
+
+/* Right */
+.right {
+  width: 220px;
+  background: rgba(255,255,255,0.35);
+  text-align: center;
+}
+
+.right h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+}
