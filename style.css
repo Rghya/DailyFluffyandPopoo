@@ -23,7 +23,7 @@ body {
 .bg-overlay {
     position: fixed;
     inset: 0;
-    background: url("https://raw.githubusercontent.com/Rghya/DailyFluffyandPopoo/main/bg1.png") repeat;
+    background: url("./bg1.png") repeat;
     opacity: 0.5;
     z-index: 0;
     background-repeat: no-repeat;
@@ -116,5 +116,6 @@ body {
   border-radius: 14px;
 
 }
+
 
 
