@@ -1,87 +1,117 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --peach-dark: #a63a6f;
+}
+
+/* Body base */
 body {
-  margin: 0;
   min-height: 100vh;
-  background: #ffd6e7 url("./bg.png") repeat;
+  background: #ffd6e7;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  width: 95%;
-  max-width: 420px;
+/* Background image with 50% opacity */
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: url(./assets/bg.png) repeat;
+    opacity: 0.5;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140% 160%;
+}
+
+
+
+
+
+/* Desktop canvas */
+.desktop-wrapper {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 520px);
+  padding: 26px;
   text-align: center;
-  padding: 20px;
 }
 
+/* Glass base */
+.glass {
+    background: rgb(255 133 133 / 30%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Noise texture */
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Timer */
 .timer {
-  font-family: 'Indie Flower', cursive;
-  background: #f7b7dd;
-  padding: 8px 12px;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  font-family: 'Inria Serif', serif;
+  font-weight: 500;
+  color: var(--peach-dark);
+  font-size: clamp(16px, 2.4vw, 20px);
+  padding: 14px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 22px;
 }
 
-h1 {
+/* Heading */
+.heading {
   font-family: 'Irish Grover', cursive;
-  margin: 10px 0 20px;
+  color: var(--peach-dark);
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 30px;
 }
 
+/* Buttons */
 .buttons button {
   width: 100%;
-  margin: 8px 0;
-  padding: 12px;
-  border-radius: 14px;
+  margin-bottom: 16px;
+  padding: 18px;
+  border-radius: 22px;
   border: none;
-  background: #f7b7dd;
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 16px;
+  font-size: clamp(16px, 2.6vw, 20px);
+  color: var(--peach-dark);
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition: transform 0.15s ease;
 }
 
 .buttons button:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .buttons button:active {
-  transform: scale(0.96);
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+  transform: scale(0.95);
 }
 
-.song-card {
-  margin-top: 20px;
-  background: #f7b7dd;
-  border-radius: 16px;
+/* Song box */
+.song-box {
+  margin-top: 26px;
+  border-radius: 22px;
   padding: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
-.song-card img {
-  width: 45px;
-  height: 45px;
-  border-radius: 6px;
-  background: #000;
-  object-fit: cover;
-}
-
-.song-card p {
-  flex: 1;
-  font-family: 'Inria Serif', serif;
-  margin: 0;
-}
-
-.play {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
+.song-box iframe {
+  border-radius: 14px;
 }

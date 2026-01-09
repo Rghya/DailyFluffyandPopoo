@@ -2,35 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>App Kya Choose Karna Chahte Ho?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUR DAILY</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Irish+Grover&family=Gloria+Hallelujah&family=Inria+Serif&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
+  <!-- Background overlay -->
+  <div class="bg-overlay"></div>
 
-    <div class="timer" id="timer">
-      Time Left : 00 Years 00 Months 00 Days
+  <div class="desktop-wrapper">
+
+    <div class="timer glass" id="timer">
+      Time Left : 
     </div>
 
-    <h1>APP KYA CHOOSE<br>KARNA CHAHATE HO??</h1>
+    <h1 class="heading">
+      APP KYA CHOOSE <br>
+      KARNA CHAHATE HO??
+    </h1>
 
     <div class="buttons">
-      <button>AJJ KA NOTE</button>
-      <button>AJJ KA SPECIAL</button>
-      <button>KHAAS OPTIONS</button>
+      <button class="glass">AJJ KA NOTE</button>
+      <button class="glass">AJJ KA SPECIAL</button>
+      <button class="glass">KHAAS OPTIONS</button>
     </div>
 
-    <div class="song-card">
-      <img id="songImg" src="" alt="">
-      <p id="songName">Song name</p>
-      <button class="play" id="playBtn">▶</button>
+    <div class="song-box glass">
+      <iframe
+        id="spotifyEmbed"
+        src=""
+        width="100%"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
     </div>
+
 
   </div>
 
