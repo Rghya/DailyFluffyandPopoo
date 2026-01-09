@@ -23,7 +23,7 @@ body {
 .bg-overlay {
     position: fixed;
     inset: 0;
-    background: url(./assets/bg.png) repeat;
+    background: url(./bg.png) repeat;
     opacity: 0.5;
     z-index: 0;
     background-repeat: no-repeat;
@@ -114,4 +114,5 @@ body {
 
 .song-box iframe {
   border-radius: 14px;
+
 }
